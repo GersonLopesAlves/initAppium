@@ -1,5 +1,7 @@
 # Mobile Automation using Appium and Python programming language.
 
+**Forked from Experitest Repo**  
+
 This project demonstrates Mobile Automation using Appium and Python programming language.
 Pycharm IDE used for Python.
 
@@ -20,7 +22,7 @@ Basic Test case creation using Python/unittest framework using Appium Python Lib
 2. Start Appium Server using Appium Desktop installed in your PC.
    The project expects the Appium Server to run on localhost:4723. If you run the server to different host and port. Please change the code.
 
-3. Download the Eribank application using URL : https://experitest.s3.amazonaws.com/eribank.apk to c:\\  (The code uses the Application from c:\\ (in windows). Please change the code in case you   change the download location)
+3. Download the Eribank application using URL : https://experitest.s3.amazonaws.com/eribank.apk to location in your PC  (The code uses the Application from the download location) 
 
 4. Import the cloned project in Pycharm (In Pycharm menu, navigate to File > Open or "Open" if no projects are open)
 
@@ -37,7 +39,7 @@ Basic Test case creation using Python/unittest framework using Appium Python Lib
       Path of the Eribank application (in case downloaded location is different)
 
       ```
-      self.dc['app'] = "c:\\eribank.apk"
+      self.dc['app'] = "/home/<your_user>/eribank.apk"
       ```
 
       Device name (After excecuting adb devices. See "Android device recognition" in the blogs)

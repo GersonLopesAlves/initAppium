@@ -7,8 +7,8 @@ class AppiumTest(unittest.TestCase):
     driver = None
 
     def setUp(self):
-        # This is the Application and ‘app’ desired capability to specify a path to Appium.
-        self.dc['app'] = "c:\\eribank.apk"
+        # This is the Application and app desired capability to specify a path to Appium.
+        self.dc['app'] = "/home/jonathas/Downloads/eribank.apk"
         # appPackage and appActivity  desired capability specify app details to Appium
         self.dc['appPackage'] = "com.experitest.ExperiBank"
         self.dc['appActivity'] = ".LoginActivity"
@@ -16,11 +16,11 @@ class AppiumTest(unittest.TestCase):
         self.dc['platformName'] = 'Android'
         # deviceName desired capability specify the device id detail to Appium
         # device id is got from running adb devices command in PC
-        self.dc['deviceName'] = 'a3ae1c63'
+        self.dc['deviceName'] = 'Nexus_5X_API_29_x86'
         # Creating the Driver by passing Desired Capabilities.
         self.driver = webdriver.Remote("http://localhost:4723/wd/hub", self.dc)
 
-    def testFirstAutomation(self):
+    def testSecondAutomation(self):
         if len(self.driver.find_elements_by_xpath("//*[@text='OK']")) > 0:
             self.driver.find_element_by_xpath("//*[@text='OK']").click();
         # Find location of Elements and perform action.
